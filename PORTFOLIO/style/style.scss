@@ -1,0 +1,410 @@
+/*-----------------------------------------------------------------------DEFAULT-CSS-START-------------------------------------------------------------------------------*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body {
+	line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+nav ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+	background-color: #ff9;
+	color: #000;
+	text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+	background-color: #ff9;
+	color: #000;
+	font-style: italic;
+	font-weight: bold;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #cccccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+input,
+select {
+	vertical-align: middle;
+}
+/*-----------------------------------------------------------------------DEFAULT-CSS-END----------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------BODY--START----------------------------------------------------------------------------------------------*/
+
+body {
+	color: white !important;
+}
+/*-----------------------------------------------------------------------FIRST-SECTION-START----------------------------------------------------------------------------------------------*/
+.background-image {
+	background-color: black;
+	background: url("/img/1597972.png") no-repeat fixed center;
+	border-bottom: 8px solid gray;
+	width: 100%;
+	background-size: cover;
+}
+
+.icon {
+	width: 100px;
+	height: auto;
+	margin: 10px auto;
+}
+
+.container {
+	display: flex;
+}
+
+.nav-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2%;
+	max-height: 50px;
+}
+
+.logo{
+	height: 36px;
+    width: 150px;
+}
+
+.btn-danger {
+	background-color: #e50914 !important;
+}
+
+.box-main {
+	min-height: 620px;
+	width: 100%;
+}
+/*-----------------------------------------------------------------------FIRST-SECTION-END----------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------SECOND-SECTION-START----------------------------------------------------------------------------------------------*/
+
+.bg-faq{
+    background-color: black;
+    border-bottom: 8px solid gray;
+}
+
+$midnight: #2c3e50;
+$clouds: #ecf0f1;
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+// Layout
+.row-faq {
+  display: flex;
+  .col {
+    flex: 1;
+    &:last-child {
+      margin-left: 1em;
+    }
+  }
+}
+/* Accordion styles */
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  &-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: $midnight;
+    font-weight: bold;
+    cursor: pointer;
+    /* Icon */
+    &:hover {
+      background: darken($midnight, 10%);
+    }
+    &::after {
+      content: "\276F";
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all 0.35s;
+    }
+  }
+  &-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: $midnight;
+    background: white;
+    transition: all 0.35s;
+  }
+  &-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: $midnight;
+    cursor: pointer;
+    &:hover {
+      background: darken($midnight, 10%);
+    }
+  }
+}
+
+// :checked
+input:checked {
+  + .tab-label {
+    background: darken($midnight, 10%);
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  ~ .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+  }
+}
+
+.faq-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tabs{
+    border-radius: 0px;
+}
+
+.tab-label{
+    margin: 5px 0px 0px;
+    background-color: #303030 !important;
+    border-bottom: solid 1px black;
+}
+
+.tab-content{
+    background: #303030;
+    color: white;
+}
+
+
+/*-----------------------------------------------------------------------SECOND-SECTION-END----------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------FOOTER-SECTION-START----------------------------------------------------------------------------------------------*/
+
+footer{
+    background-color: black;
+}
+
+.list-main{
+    text-align: left;
+}
+
+.list-footer{
+    box-sizing: border-box;
+    padding: 0;
+    margin-bottom: 16px;
+    display: inline-block;
+    min-width: 100px;
+    width: 25%;
+    padding-right: 12px;
+    vertical-align: top;
+    justify-content: end;
+}
+
+.footer-container-foda{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  font-size: 13px;
+}
+
+.footer-main-title{
+  width: 300px; 
+  font-size: 15px !important;
+}
+
+.footer-item-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-select{
+  margin-left: 250px;
+}
+
+.footer-colums{
+  padding-top: 15px;
+  padding-right: 50px;
+}
+
+/*-----------------------------------------------------------------------FOOTER-SECTION-END----------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------BODY--END----------------------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------MediaQuery--START----------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------FOOTER-SECTION-START----------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width:500px) { 
+	.footer-container-foda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-main-title{
+    width: auto;
+    font-size: 15px !important;
+  }
+
+  .ui-select{
+    margin-left: 40%;
+  }
+
+  .footer-colums{
+    padding-top: 15px;
+    padding-right: 0px;
+  }
+}
+
+/*-----------------------------------------------------------------------FOOTER-SECTION-END----------------------------------------------------------------------------------------------*/
