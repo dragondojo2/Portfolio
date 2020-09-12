@@ -78,6 +78,7 @@ video {
 }
 
 body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1;
 }
 
@@ -211,8 +212,8 @@ body {
 }
 
 .logo {
-  height: 36px;
-  width: 150px;
+  height: auto;
+  width: 30vh;
 }
 
 .btn-danger {
@@ -224,14 +225,74 @@ body {
   width: 100%;
 }
 
+.overlay {
+  opacity: 70%;
+  position: absolute;
+  background-color: black !important;
+  height: 694px !important;
+  width: 100% !important;
+}
+
+.font-size-text {
+  font-size: 4rem;
+}
+
+.box-text-center {
+  line-height: 1.1;
+  text-align: center;
+}
+
+.over-the-overlay {
+  position: relative;
+}
+
+.font-header-faq {
+  text-align: center;
+  font-size: 3.125rem;
+  line-height: 1.1;
+  margin-bottom: 3.0rem;
+  margin-top: 1.5rem;
+}
+
+#EmailContact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#exampleInputEmail1 {
+  width: 450px;
+  height: 60px;
+  border-radius: 0;
+  border: solid 1px !important;
+}
+
+#emailButton {
+  min-width: 157px;
+  height: 60px;
+  font-size: 1.625rem;
+  border-radius: 0;
+  letter-spacing: .1px;
+  padding-left: 26px;
+  padding-right: 26px;
+}
+
 /*-----------------------------------------------------------------------FIRST-SECTION-END----------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------SECOND-SECTION-START----------------------------------------------------------------------------------------------*/
+#FaqSize {
+  max-width: 800px;
+  width: 100%;
+}
+
 .bg-faq {
   background-color: black;
   border-bottom: 8px solid gray;
 }
 
-input {
+#chck6, #chck5, #chck4, #chck3, #chck2, #chck1 {
   position: absolute;
   opacity: 0;
   z-index: -1;
@@ -354,11 +415,13 @@ input:checked ~ .tab-content {
   margin: 5px 0px 0px;
   background-color: #303030 !important;
   border-bottom: solid 1px black;
+  font-weight: 400 !important;
 }
 
 .tab-content {
   background: #303030;
   color: white;
+  font-weight: 330 !important;
 }
 
 /*-----------------------------------------------------------------------SECOND-SECTION-END----------------------------------------------------------------------------------------------*/
@@ -415,20 +478,33 @@ footer {
           flex-direction: column;
 }
 
-.ui-select {
-  margin-left: 250px;
-}
-
 .footer-colums {
   padding-top: 15px;
   padding-right: 50px;
+  color: #757575;
+}
+
+a:hover {
+  color: #757575 !important;
+  text-decoration: none !important;
 }
 
 /*-----------------------------------------------------------------------FOOTER-SECTION-END----------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------BODY--END----------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------MediaQuery--START----------------------------------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------FOOTER-SECTION-START----------------------------------------------------------------------------------------------*/
 @media only screen and (max-width: 500px) {
+  /*-----------------------------------------------------------------------FIRST-SECTION-START----------------------------------------------------------------------------------------------*/
+  #EmailContact {
+    display: block;
+  }
+  #exampleInputEmail1 {
+    width: 100%;
+  }
+  #emailButton {
+    margin-top: 20px;
+  }
+  /*-----------------------------------------------------------------------FIRST-SECTION-END----------------------------------------------------------------------------------------------*/
+  /*-----------------------------------------------------------------------FOOTER-SECTION-START----------------------------------------------------------------------------------------------*/
   .footer-container-foda {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -445,14 +521,10 @@ footer {
     width: auto;
     font-size: 15px !important;
   }
-  .ui-select {
-    margin-left: 40%;
-  }
   .footer-colums {
     padding-top: 15px;
     padding-right: 0px;
   }
+  /*-----------------------------------------------------------------------FOOTER-SECTION-END----------------------------------------------------------------------------------------------*/
 }
-
-/*-----------------------------------------------------------------------FOOTER-SECTION-END----------------------------------------------------------------------------------------------*/
 /*# sourceMappingURL=style.css.map */

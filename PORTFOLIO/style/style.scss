@@ -78,6 +78,7 @@ video {
 }
 
 body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 1;
 }
 
@@ -199,9 +200,9 @@ body {
 	max-height: 50px;
 }
 
-.logo{
-	height: 36px;
-    width: 150px;
+.logo {
+	height: auto;
+	width: 30vh;
 }
 
 .btn-danger {
@@ -212,199 +213,256 @@ body {
 	min-height: 620px;
 	width: 100%;
 }
+.overlay {
+	opacity: 70%;
+	position: absolute;
+	background-color: black !important;
+	height: 694px !important;
+	width: 100% !important;
+}
+.font-size-text {
+	font-size: 4rem;
+}
+.box-text-center {
+	line-height: 1.1;
+	text-align: center;
+}
+.over-the-overlay {
+	position: relative;
+}
+.font-header-faq{
+  text-align: center;
+  font-size: 3.125rem;
+  line-height: 1.1;
+  margin-bottom: 3.0rem;
+  margin-top: 1.5rem;
+}
+
+#EmailContact{
+	display: flex; justify-content: center;
+}
+
+#exampleInputEmail1{
+	width: 450px;
+	height: 60px;
+	border-radius: 0;
+	border: solid 1px !important;
+}
+
+#emailButton{
+	min-width: 157px; height: 60px; font-size: 1.625rem; border-radius: 0; letter-spacing: .1px; padding-left: 26px; padding-right: 26px;
+}
 /*-----------------------------------------------------------------------FIRST-SECTION-END----------------------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------SECOND-SECTION-START----------------------------------------------------------------------------------------------*/
-
-.bg-faq{
-    background-color: black;
-    border-bottom: 8px solid gray;
+#FaqSize {
+	max-width: 800px;
+	width: 100%;
+}
+.bg-faq {
+	background-color: black;
+	border-bottom: 8px solid gray;
 }
 
 $midnight: #2c3e50;
 $clouds: #ecf0f1;
-input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
+#chck6, #chck5, #chck4, #chck3, #chck2, #chck1 {
+	position: absolute;
+	opacity: 0;
+	z-index: -1;
 }
 // Layout
 .row-faq {
-  display: flex;
-  .col {
-    flex: 1;
-    &:last-child {
-      margin-left: 1em;
-    }
-  }
+	display: flex;
+	.col {
+		flex: 1;
+		&:last-child {
+			margin-left: 1em;
+		}
+	}
 }
 /* Accordion styles */
 .tabs {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
 }
 .tab {
-  width: 100%;
-  color: white;
-  overflow: hidden;
-  &-label {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-    background: $midnight;
-    font-weight: bold;
-    cursor: pointer;
-    /* Icon */
-    &:hover {
-      background: darken($midnight, 10%);
-    }
-    &::after {
-      content: "\276F";
-      width: 1em;
-      height: 1em;
-      text-align: center;
-      transition: all 0.35s;
-    }
-  }
-  &-content {
-    max-height: 0;
-    padding: 0 1em;
-    color: $midnight;
-    background: white;
-    transition: all 0.35s;
-  }
-  &-close {
-    display: flex;
-    justify-content: flex-end;
-    padding: 1em;
-    font-size: 0.75em;
-    background: $midnight;
-    cursor: pointer;
-    &:hover {
-      background: darken($midnight, 10%);
-    }
-  }
+	width: 100%;
+	color: white;
+	overflow: hidden;
+	&-label {
+		display: flex;
+		justify-content: space-between;
+		padding: 1em;
+		background: $midnight;
+		font-weight: bold;
+		cursor: pointer;
+		/* Icon */
+		&:hover {
+			background: darken($midnight, 10%);
+		}
+		&::after {
+			content: "\276F";
+			width: 1em;
+			height: 1em;
+			text-align: center;
+			transition: all 0.35s;
+		}
+	}
+	&-content {
+		max-height: 0;
+		padding: 0 1em;
+		color: $midnight;
+		background: white;
+		transition: all 0.35s;
+	}
+	&-close {
+		display: flex;
+		justify-content: flex-end;
+		padding: 1em;
+		font-size: 0.75em;
+		background: $midnight;
+		cursor: pointer;
+		&:hover {
+			background: darken($midnight, 10%);
+		}
+	}
 }
 
 // :checked
 input:checked {
-  + .tab-label {
-    background: darken($midnight, 10%);
-    &::after {
-      transform: rotate(90deg);
-    }
-  }
-  ~ .tab-content {
-    max-height: 100vh;
-    padding: 1em;
-  }
+	+ .tab-label {
+		background: darken($midnight, 10%);
+		&::after {
+			transform: rotate(90deg);
+		}
+	}
+	~ .tab-content {
+		max-height: 100vh;
+		padding: 1em;
+	}
 }
 
-.faq-cards{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.faq-cards {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.tabs{
-    border-radius: 0px;
+.tabs {
+	border-radius: 0px;
 }
 
-.tab-label{
-    margin: 5px 0px 0px;
-    background-color: #303030 !important;
-    border-bottom: solid 1px black;
+.tab-label {
+	margin: 5px 0px 0px;
+	background-color: #303030 !important;
+	border-bottom: solid 1px black;
+	font-weight: 400 !important;
 }
 
-.tab-content{
-    background: #303030;
-    color: white;
+.tab-content {
+	background: #303030;
+	color: white;
+	font-weight: 330 !important;
 }
-
 
 /*-----------------------------------------------------------------------SECOND-SECTION-END----------------------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------FOOTER-SECTION-START----------------------------------------------------------------------------------------------*/
 
-footer{
-    background-color: black;
+footer {
+	background-color: black;
 }
 
-.list-main{
-    text-align: left;
+.list-main {
+	text-align: left;
 }
 
-.list-footer{
-    box-sizing: border-box;
-    padding: 0;
-    margin-bottom: 16px;
-    display: inline-block;
-    min-width: 100px;
-    width: 25%;
-    padding-right: 12px;
-    vertical-align: top;
-    justify-content: end;
+.list-footer {
+	box-sizing: border-box;
+	padding: 0;
+	margin-bottom: 16px;
+	display: inline-block;
+	min-width: 100px;
+	width: 25%;
+	padding-right: 12px;
+	vertical-align: top;
+	justify-content: end;
 }
 
-.footer-container-foda{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  font-size: 13px;
+.footer-container-foda {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: left;
+	font-size: 13px;
 }
 
-.footer-main-title{
-  width: 300px; 
-  font-size: 15px !important;
+.footer-main-title {
+	width: 300px;
+	font-size: 15px !important;
 }
 
-.footer-item-col{
-  display: flex;
-  flex-direction: column;
+.footer-item-col {
+	display: flex;
+	flex-direction: column;
 }
 
-.ui-select{
-  margin-left: 250px;
+.footer-colums {
+	padding-top: 15px;
+	padding-right: 50px;
+	color: #757575;
 }
 
-.footer-colums{
-  padding-top: 15px;
-  padding-right: 50px;
+a:hover{
+	color: #757575 !important;
+	text-decoration: none !important;
 }
 
 /*-----------------------------------------------------------------------FOOTER-SECTION-END----------------------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------BODY--END----------------------------------------------------------------------------------------------*/
 
-
 /*-----------------------------------------------------------------------MediaQuery--START----------------------------------------------------------------------------------------------*/
 
+@media only screen and (max-width: 500px) {
+/*-----------------------------------------------------------------------FIRST-SECTION-START----------------------------------------------------------------------------------------------*/
+
+	#EmailContact{
+		display: block;
+	}
+
+	#exampleInputEmail1{
+		width: 100%;
+	}
+
+	#emailButton{
+		margin-top: 20px;
+	}
+
+/*-----------------------------------------------------------------------FIRST-SECTION-END----------------------------------------------------------------------------------------------*/
+
 /*-----------------------------------------------------------------------FOOTER-SECTION-START----------------------------------------------------------------------------------------------*/
+	
+	.footer-container-foda {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
 
-@media only screen and (max-width:500px) { 
-	.footer-container-foda{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .footer-main-title{
-    width: auto;
-    font-size: 15px !important;
-  }
+	.footer-main-title {
+		width: auto;
+		font-size: 15px !important;
+	}
 
-  .ui-select{
-    margin-left: 40%;
-  }
+	.footer-colums {
+		padding-top: 15px;
+		padding-right: 0px;
 
-  .footer-colums{
-    padding-top: 15px;
-    padding-right: 0px;
-  }
-}
+	}
 
 /*-----------------------------------------------------------------------FOOTER-SECTION-END----------------------------------------------------------------------------------------------*/
+}
+

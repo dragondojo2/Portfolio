@@ -5,33 +5,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="icon" href="img/suco-flix-logo.png">
     </link>
-    <title>PORTFOLIO</title>
+    <title>SucoFlix - Assita meu Portifólio.</title>
 </head>
 
 <body>
+    <div class="overlay"></div>
     <div class="background-image">
         <div class="pt-4">
             <div class="nav-bar">
                 <div>
-                    <img class="logo" src="https://fontmeme.com/permalink/200911/9d42c4a9d7c51e7c0be4b2fa06f8e17d.png"
+                    <img class="logo over-the-overlay"
+                        src="https://fontmeme.com/permalink/200911/9d42c4a9d7c51e7c0be4b2fa06f8e17d.png"
                         alt="netflix-font" border="0">
                 </div>
+
                 <div>
-                    <button type="button" class="btn btn-danger">Entrar</button>
+                    <button type="button" class="btn btn-danger over-the-overlay">Entrar</button>
                 </div>
             </div>
         </div>
         <div class="box-main" style="display: flex">
             <div class="container" style="justify-content: center; align-items: center">
-                <div class="row" style="padding: 0px">
+                <div class="row" style="padding: 0px; width: 100%;">
                     <div class="col-md-12" style="text-align: center">
-                        <h1>Oi, tudo bem? Meu nome é Glauco Lustosa.</h1>
-                        <h2>Sou um Web-Developer.</h2>
-                        <h4>Esse é meu site para mostrar minhas habilidades.</h4>
+                        <h1 class="box-text-center font-size-text">Oi, Tudo bem?</h1>
+                        <h1 class="box-text-center font-size-text">Meu nome é Glauco Lustosa.</h1>
+                        <h2 class="box-text-center">Sou um Web-Developer. E esse é meu Portifólio.</h2>
+                        <div class="pt-4">
+                            <h5 class="box-text-center">Pronto para ter o seu site? Informe seu email e entre em contato para começarmos a criá-lo.</h5>
+                            <div class="mt-4">
+                                <form>
+                                    <div class="form-group" id="EmailContact">
+                                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                                      <button type="submit" class="btn btn-danger over-the-overlay" id="emailButton">VAMOS LÁ <span> ! </span></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -39,11 +52,12 @@
     </div>
 
     <div class="bg-faq pt-4 pb-4">
-        <div class="container faq-cards">
+        <h1 class="font-header-faq">Perguntas frequentes</h1>
+        <div class="container faq-cards" id="FaqSize">
             <div>
                 <div class="row-faq">
                     <div class="col" style="margin: 0;">
-                        <div class="tabs">
+                        <div class="tabs" style=" font-weight: 400; font-size: 1.625rem;">
                             <div class="tab">
                                 <input type="checkbox" id="chck1">
                                 <label class="tab-label" for="chck1">O que é a Netflix?</label>
@@ -118,7 +132,24 @@
                         <a class="footer-colums">Formas de assistir</a>
                         <a class="footer-colums">Informações corporativas</a>
                         <a class="footer-colums">Originais Netflix</a>
-                        
+                        <a class="footer-colums">
+                            <div class="lang-selection-container pb-5" id="lang-switcher">
+                                <div data-uia="language-picker+container" class="ui-select-wrapper"><label
+                                        for="undefined-select" class="ui-label no-display"><span
+                                            class="ui-label-text"></span></label>
+                                    <div class="select-arrow medium prefix globe"><select data-uia="language-picker"
+                                            class="ui-select medium" id="undefined-select" tabindex="0"
+                                            placeholder="lang-switcher">
+                                            <option selected="" value="/br/" data-language="pt" data-country="BR">
+                                                Português
+                                            </option>
+                                            <option value="/br-en/" data-language="en" data-country="BR">English
+                                            </option>
+                                        </select></div>
+                                </div>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
                 <div class="col-md-3 pr-1">
@@ -128,6 +159,7 @@
                         <a class="footer-colums">Formas de assistir</a>
                         <a class="footer-colums">Informações corporativas</a>
                         <a class="footer-colums">Originais Netflix</a>
+
                     </div>
                 </div>
                 <div class="col-md-3 pr-1">
@@ -137,6 +169,7 @@
                         <a class="footer-colums">Formas de assistir</a>
                         <a class="footer-colums">Informações corporativas</a>
                         <a class="footer-colums">Originais Netflix</a>
+
                     </div>
                 </div>
                 <div class="col-md-3 pr-1">
@@ -146,40 +179,16 @@
                         <a class="footer-colums">Formas de assistir</a>
                         <a class="footer-colums">Informações corporativas</a>
                         <a class="footer-colums">Originais Netflix</a>
+
                     </div>
                 </div>
             </div>
-      
-        </div>
-        <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-            <div class="lang-selection-container pb-5" id="lang-switcher">
-                <div data-uia="language-picker+container" class="ui-select-wrapper"><label for="undefined-select"
-                        class="ui-label no-display"><span class="ui-label-text"></span></label>
-                    <div class="select-arrow medium prefix globe"><select data-uia="language-picker"
-                            class="ui-select medium" id="undefined-select" tabindex="0" placeholder="lang-switcher">
-                            <option selected="" value="/br/" data-language="pt" data-country="BR">Português</option>
-                            <option value="/br-en/" data-language="en" data-country="BR">English</option>
-                        </select></div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
     </footer>
 </body>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-<script type="text/javascript" src="angular-1.8.0/angular.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <script type="text/javascript" src="script.js"></script>
 
 </html>
